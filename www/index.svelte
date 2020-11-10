@@ -4,6 +4,7 @@
 	
 	h1 {
 		font-family: sans-serif;
+		color: blue
 	}
 	
 </style>

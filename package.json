@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@tsconfig/svelte": "^1.0.10",
+    "svelte": "^3.29.7"
+  }
+}
