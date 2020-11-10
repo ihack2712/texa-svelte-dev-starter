@@ -27,7 +27,7 @@ app.use(new Static(__dirname(import.meta) + "/www", {
 			{
 				// Return a rendered page.
 				return [
-					`<!DOCTYPE html5><html><head><meta charset="UTF-8"/></head><body><script type="module">${_.js.code.replaceAll("export default ", "(() => {const {head,html,css} =").trim().replace(/\;$/g, "") + ".render()"};document.head.innerHTML += head + "<style>\`\${css}\`</style>"; document.body.innerHTML += html;})();</script></body></html>`,
+					`<!DOCTYPE html5><html><head><meta charset="UTF-8"/></head><body><script type="module">${_.js.code.replaceAll("export default ", "(() => {const {head,html,css} =").trim().replace(/\;$/g, "") + ".render()"};document.head.innerHTML += head + \`<style>\${css.code}</style>\`; document.body.innerHTML += html; console.log(css)})();</script></body></html>`,
 					"text/html"
 				];
 			}
